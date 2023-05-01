@@ -7,10 +7,15 @@ Site::Site(std::string _url) {
 		{"Accept","text/html"}
 		});
 	parameters.clear();
-	params = new cpr::Parameters();
+	params = nullptr;
 	payload = nullptr;
 	session.SetHeader(headerc);
 	
+}
+
+Site::~Site() {
+	delete params;
+	delete payload;
 }
 
 void Site::get(){

@@ -22,6 +22,7 @@ protected:
 	void update_params();
 	void update_payload();
 public:
+	~Site();
 	explicit Site(std::string _url);
 	void get();
 	void post();
